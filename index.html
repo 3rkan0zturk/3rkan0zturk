@@ -17,10 +17,10 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gray-50 text-gray-900">
 
     <!-- Header -->
-    <header class="bg-white shadow-lg">
+    <header class="bg-white shadow-md border-b border-gray-200">
         <div class="container mx-auto px-6 py-4">
             <h1 class="text-3xl font-bold text-center text-red-800">Mustafa Kemal Atatürk</h1>
             <p class="text-center text-gray-600">Türkiye Cumhuriyeti'nin Kurucusu</p>
@@ -30,81 +30,87 @@
     <!-- Ana İçerik -->
     <main class="container mx-auto px-6 py-12">
 
-        <!-- Hero Alanı -->
-        <section id="hero" class="text-center mb-16">
-            <img src="https://placehold.co/800x400/CCCCCC/FFFFFF?text=Mustafa+Kemal+Atat%C3%BCrk" 
-                 alt="Mustafa Kemal Atatürk" 
-                 class="w-full max-w-4xl mx-auto rounded-lg shadow-2xl object-cover"
-                 onerror="this.src='https://placehold.co/800x400/CCCCCC/FFFFFF?text=Resim+Y%C3%BCklenemedi';">
-            <h2 class="text-4xl font-bold mt-8 mb-4">Büyük Önder</h2>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                Askeri bir deha, karizmatik bir lider ve modern Türkiye'nin mimarı.
-            </p>
+        <!-- Hero Alanı - Yeniden Tasarlandı -->
+        <section id="hero" class="flex flex-col md:flex-row items-center justify-between gap-12 mb-20 mt-8">
+            <!-- Portre Alanı -->
+            <div class="w-full md:w-1/3 flex justify-center">
+                <img src="https://placehold.co/500x500/666666/FFFFFF?text=Atat%C3%BCrk" 
+                     alt="Mustafa Kemal Atatürk Portresi" 
+                     class="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-2xl object-cover border-4 border-white"
+                     onerror="this.src='https://placehold.co/500x500/CCCCCC/FFFFFF?text=Resim+Y%C3%BCklenemedi';">
+            </div>
+            <!-- Metin Alanı -->
+            <div class="w-full md:w-2/3 text-center md:text-left">
+                <h2 class="text-5xl font-bold mb-4 text-gray-900">Büyük Önder</h2>
+                <p class="text-2xl text-gray-700 max-w-2xl">
+                    Askeri bir deha, karizmatik bir lider ve modern Türkiye'nin mimarı.
+                </p>
+            </div>
         </section>
 
         <!-- Hayatı Bölümü -->
-        <section id="hayati" class="bg-white p-8 rounded-lg shadow-lg mb-12">
+        <section id="hayati" class="bg-white p-10 rounded-xl shadow-xl mb-12">
             <h3 class="text-3xl font-semibold mb-6 border-b-2 border-red-200 pb-2">Hayatı (1881 - 1938)</h3>
-            <p class="text-gray-700 leading-relaxed mb-4">
+            <p class="text-gray-700 leading-loose mb-4">
                 Mustafa Kemal Atatürk, 1881'de Selanik'te doğdu. Askeri eğitim alarak Manastır Askeri İdadisi ve İstanbul Harp Okulu'ndan mezun oldu. Çanakkale Savaşları'nda gösterdiği olağanüstü başarı ile "Anafartalar Kahramanı" olarak ün kazandı.
             </p>
-            <p class="text-gray-700 leading-relaxed mb-4">
+            <p class="text-gray-700 leading-loose mb-4">
                 Osmanlı İmparatorluğu'nun I. Dünya Savaşı'ndan yenik ayrılmasının ardından, 19 Mayıs 1919'da Samsun'a çıkarak Kurtuluş Savaşı'nı başlattı. Türk milletini örgütleyerek, işgalci güçlere karşı eşsiz bir bağımsızlık mücadelesi verdi.
             </p>
-            <p class="text-gray-700 leading-relaxed">
+            <p class="text-gray-700 leading-loose">
                 23 Nisan 1920'de Türkiye Büyük Millet Meclisi'ni (TBMM) kurdu. Başkomutanlığını yaptığı Türk ordusu, Sakarya Meydan Muharebesi ve Büyük Taarruz ile zafer kazandı. 29 Ekim 1923'te Türkiye Cumhuriyeti'ni ilan etti ve Türkiye'nin ilk Cumhurbaşkanı seçildi.
             </p>
         </section>
 
         <!-- Devrimleri Bölümü -->
-        <section id="devrimler" class="bg-white p-8 rounded-lg shadow-lg mb-12">
+        <section id="devrimler" class="bg-white p-10 rounded-xl shadow-xl mb-12">
             <h3 class="text-3xl font-semibold mb-6 border-b-2 border-red-200 pb-2">Devrimleri ve İlkeleri</h3>
-            <p class="text-gray-700 leading-relaxed mb-6">
+            <p class="text-gray-700 leading-loose mb-8">
                 Atatürk, modern ve çağdaş bir Türkiye yaratmak amacıyla köklü devrimler gerçekleştirdi. Bu devrimler, Türk toplumunun sosyal, kültürel, hukuki ve ekonomik yapısını temelden değiştirdi.
             </p>
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- İlke Kartı -->
-                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- İlke Kartı (Etkileşim eklendi) -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 transition-all duration-300 transform hover:shadow-lg hover:scale-[1.02] hover:border-red-300">
                     <h4 class="text-xl font-semibold text-red-800">Siyasi Devrimler</h4>
                     <p class="text-gray-600 mt-2">Saltanatın kaldırılması, Cumhuriyet'in ilanı, Halifeliğin kaldırılması.</p>
                 </div>
-                <!-- İlke Kartı -->
-                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <!-- İlke Kartı (Etkileşim eklendi) -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 transition-all duration-300 transform hover:shadow-lg hover:scale-[1.02] hover:border-red-300">
                     <h4 class="text-xl font-semibold text-red-800">Hukuk Devrimleri</h4>
                     <p class="text-gray-600 mt-2">Medeni Kanun'un kabulü, laik hukuk sistemine geçiş.</p>
                 </div>
-                <!-- İlke Kartı -->
-                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <!-- İlke Kartı (Etkileşim eklendi) -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 transition-all duration-300 transform hover:shadow-lg hover:scale-[1.02] hover:border-red-300">
                     <h4 class="text-xl font-semibold text-red-800">Eğitim ve Kültür</h4>
                     <p class="text-gray-600 mt-2">Harf Devrimi (Latin alfabesinin kabulü), Tevhid-i Tedrisat Kanunu (Eğitim Birliği).</p>
                 </div>
-                <!-- İlke Kartı -->
-                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <!-- İlke Kartı (Etkileşim eklendi) -->
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 transition-all duration-300 transform hover:shadow-lg hover:scale-[1.02] hover:border-red-300">
                     <h4 class="text-xl font-semibold text-red-800">Toplumsal Devrimler</h4>
                     <p class="text-gray-600 mt-2">Kadınlara seçme ve seçilme hakkı verilmesi, Şapka ve Kıyafet Devrimi.</p>
                 </div>
             </div>
-            <p class="text-gray-700 leading-relaxed mt-6">
+            <p class="text-gray-700 leading-loose mt-8">
                 Tüm bu devrimler, "Cumhuriyetçilik, Milliyetçilik, Halkçılık, Devletçilik, Laiklik ve İnkılapçılık" olarak bilinen altı temel ilkeye (Altı Ok) dayanır.
             </p>
         </section>
 
-        <!-- Önemli Sözü Bölümü -->
-        <section id="soz" class="text-center mb-12">
-            <blockquote class="text-2xl italic text-gray-800 max-w-3xl mx-auto border-l-4 border-red-700 pl-6">
+        <!-- Önemli Sözü Bölümü (Vurgu artırıldı) -->
+        <section id="soz" class="text-center my-20">
+            <blockquote class="text-3xl italic text-gray-900 font-medium max-w-4xl mx-auto border-l-8 border-red-700 pl-8">
                 <p>"Benim naçiz vücudum elbet bir gün toprak olacaktır, fakat Türkiye Cumhuriyeti ilelebet payidar kalacaktır."</p>
-                <cite class="block text-right text-lg font-semibold text-gray-600 mt-4">- Mustafa Kemal Atatürk</cite>
+                <cite class="block text-right text-xl font-semibold text-gray-600 mt-6">- Mustafa Kemal Atatürk</cite>
             </blockquote>
         </section>
 
         <!-- Anıtkabir Bölümü -->
-        <section id="anitkabir" class="bg-white p-8 rounded-lg shadow-lg text-center">
-            <h3 class="text-3xl font-semibold mb-4">Ebedi İstirahatgahı</h3>
-            <img src="https://placehold.co/600x300/CCCCCC/FFFFFF?text=An%C4%B1tkabir" 
+        <section id="anitkabir" class="bg-white p-10 rounded-xl shadow-xl text-center">
+            <h3 class="text-3xl font-semibold mb-6">Ebedi İstirahatgahı</h3>
+            <img src="https://placehold.co/800x400/CCCCCC/FFFFFF?text=An%C4%B1tkabir" 
                  alt="Anıtkabir" 
-                 class="w-full max-w-2xl mx-auto rounded-lg shadow-lg mb-4"
-                 onerror="this.src='https://placehold.co/600x300/CCCCCC/FFFFFF?text=Resim+Y%C3%BCklenemedi';">
-            <p class="text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                 class="w-full max-w-3xl mx-auto rounded-lg shadow-xl mb-6"
+                 onerror="this.src='https://placehold.co/800x400/CCCCCC/FFFFFF?text=Resim+Y%C3%BCklenemedi';">
+            <p class="text-gray-700 leading-loose max-w-3xl mx-auto">
                 10 Kasım 1938'de hayata gözlerini yuman Mustafa Kemal Atatürk'ün naaşı, Ankara'da bulunan Anıtkabir'de yatmaktadır. Türk milleti tarafından her zaman sevgi, saygı ve minnetle anılmaktadır.
             </p>
         </section>
@@ -112,7 +118,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-8 mt-12">
+    <footer class="bg-gray-900 text-gray-300 py-10 mt-16">
         <div class="container mx-auto px-6 text-center">
             <p>Büyük Önder Mustafa Kemal Atatürk'ü saygı ve minnetle anıyoruz.</p>
             <p class="text-sm text-gray-500 mt-2">&copy; 2025 - Bu sayfa anma amacıyla oluşturulmuştur.</p>
